@@ -37,10 +37,10 @@ def main():
     # User input for features
     st.header('Feature Input')
     
-    Location_Type={0: ='Urban',1:='Rural'}
+    location_Type={0: ='Urban',1:='Rural'}
     def format_func(option):
-        return Location_Type[option]
-    feature1 = st.selectbox("Choose your Location Type", options=list(Location_Type.keys()), format_func=format_func)
+        return location_Type[option]
+    feature1 = st.selectbox("Choose your Location Type", options=list(location_Type.keys()), format_func=format_func)
 
      cellphone_access={0: ='No',1:='Yes'}
     def format_func(option):
