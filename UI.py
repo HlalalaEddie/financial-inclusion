@@ -36,11 +36,32 @@ def main():
 
     # User input for features
     st.header('Feature Input')
-    feature1 = st.number_input('location_type', value=0)
-    feature2 = st.number_input('cellphone_access', value=0)
+    
+    Location_Type={0: ='Urban',1:='Rural'}
+    def format_func(option):
+        return Location_Type[option]
+    feature1 = st.selectbox("Choose your Location Type", options=list(Location_Type.keys()), format_func=format_func)
+
+     cellphone_access={0: ='No',1:='Yes'}
+    def format_func(option):
+        return cellphone_access[option]
+    feature2 = st.selectbox("cellphone_access", options=list(cellphone_access.keys()), format_func=format_func)
+
+
     feature3 = st.number_input('age_of_respondent', value=0)
-    feature4 = st.number_input('education_level', value=0)
-    feature5 = st.number_input('job_type', value=0)
+
+
+    education_level={0: ='Secondary education',1:= 'Vocational/Specialised training',2:='No formal education', 3:='Primary education',4:= 'Other/Dont know/RTA',5:='Tertiary education'}
+    def format_func(option):
+        return education_level[option]
+    feature4 = st.selectbox("Choose your education_level", options=list(education_level.keys()), format_func=format_func)
+
+   
+     Job_type={0: ='Formally employed Government', 1:= 'Formally employed Private',2:='Remittance Dependent', 3:='Self employed', 4:='Informally employed',5:='Farming and Fishing', 6:='Government Dependent',7:= 'Other Income',8:='Dont Know/Refuse to answer', 9:='No Income'}
+    def format_func(option):
+        return Job_type[option]
+    feature5 = st.selectbox("Choose your Job_type", options=list(Job_type.keys()), format_func=format_func)
+   
  
 
 
