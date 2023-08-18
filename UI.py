@@ -73,9 +73,9 @@ def main():
         # Perform predictions using the selected model
         prediction = model.predict([[feature1, feature2, feature3, feature4, feature5]])
         if prediction[0] == 0:
-            pred='Yes'
+            pred="Yes"
         else:
-            pred='No'
+            pred="No"
     
         # Display the prediction result
         st.header('Prediction')
