@@ -72,7 +72,11 @@ def main():
     if clicked:
         # Perform predictions using the selected model
         prediction = model.predict([[feature1, feature2, feature3, feature4, feature5]])
-
+        if prediction[0] == 0:
+            pred='Yes'
+        else:
+            pred='No'
+    
         # Display the prediction result
         st.header('Prediction')
         st.write(f'The prediction result is:  {prediction[0]}')
