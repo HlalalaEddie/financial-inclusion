@@ -42,7 +42,7 @@ def main():
         return location_Type[option]
     feature1 = st.selectbox("Choose your Location Type", options=list(location_Type.keys()), format_func=format_func)
 
-     cellphone_access={0:'No',1: 'Yes'}
+    cellphone_access={0:'No',1: 'Yes'}
     def format_func(option):
         return cellphone_access[option]
     feature2 = st.selectbox("cellphone_access", options=list(cellphone_access.keys()), format_func=format_func)
