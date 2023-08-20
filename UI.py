@@ -71,7 +71,7 @@ def main():
     # Perform predictions when the button is clicked
     if clicked:
         # Perform predictions using the selected model
-        prediction = model.predict([[feature1, feature2, feature3, feature4, feature5]])
+        prediction = model.predict([[feature1, feature2, feature3, feature4]])
         if prediction[0] == 0:
             pred="Yes"
         else:
